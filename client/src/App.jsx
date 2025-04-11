@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 import HomePage from './HomePage';
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<LoginForm setUser={setUser} />} />
           <Route path="/RegisterForm" element={<RegisterForm />} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/QuizPage" element={<QuizPage />} />
           <Route path="/QuestionPage" element={<QuestionPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
